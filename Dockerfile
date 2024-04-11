@@ -18,3 +18,5 @@ EXPOSE 3000
 
 # Run your application when the container is launched
 CMD ["node", "server.js"]
+
+
