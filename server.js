@@ -34,7 +34,7 @@
 
   const mongoose = require('mongoose');
   const ToDo = require('./toDoModel.js').ToDo;
-  const DB_URI = 'mongodb://adminUser:MyMongoDBWizPassword@mongodb.internal.maniak.academy:27017/toDoApp?authSource=admin';
+  const DB_URI = process.env.MONGODB_URI;
 
   // Include the useNewUrlParser and useUnifiedTopology options in the connection
   mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true, tls: false })
